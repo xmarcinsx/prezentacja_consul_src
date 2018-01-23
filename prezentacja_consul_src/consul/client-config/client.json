@@ -1,0 +1,45 @@
+{
+ "server": false,
+"disable_host_node_id": true,
+"ui": false,
+"data_dir": "../client",
+"node_name": "client",
+"datacenter": "dc1",
+"log_level": "INFO",
+"ports": {
+"dns": -1,
+"http": 8500,
+"serf_lan": 8301,
+"serf_wan": 8302,
+"server": 8300
+},
+"start_join": [
+"127.0.0.1:9301",
+"127.0.0.1:11301"
+],
+"checks": [
+        {
+            "id" : "check_cpu_utilization",
+            "notes" : "Greater than 50% warn, greater than 75% fail.",
+            "name" : "CPU Utilization",
+            "script" : "${HOME}/work/prezentacja_consul/consul/checks/cpu_utilization.sh",
+            "interval" : "10s"
+        },
+        {
+          "id" : "check_mem_utilization",
+          "notes" : "Greater than 50% warn, greater than 75% fail.",
+          "name" : "MEM Utilization",
+          "script" : "${HOME}/work/prezentacja_consul/consul/checks/mem_utilization.sh",
+          "interval" : "10s"
+        },
+        {
+          "id" : "check_hdd_utilization",
+          "notes" : "Greater than 50% warn, greater than 75% fail.",
+          "name" : "HDD Utilization",
+          "script" : "${HOME}/work/prezentacja_consul/consul/checks/hdd_utilization.sh",
+          "interval" : "10s"
+        }
+    ]
+}
+
+

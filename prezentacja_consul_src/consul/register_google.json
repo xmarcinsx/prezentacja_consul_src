@@ -1,0 +1,11 @@
+{
+"ID": "google",
+"Name": "google",
+"Tags": ["primary","v1"],
+"Address": "http://google.pl",
+"Port": 8080,
+"Check": {
+"Interval": "10s",
+"TTL": "15s"
+}
+}

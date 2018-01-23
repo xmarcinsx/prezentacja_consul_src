@@ -1,0 +1,17 @@
+{
+"server": true,
+"disable_host_node_id": true,
+"ui": true,
+"data_dir": "server2",
+"node_name": "server2",
+"datacenter": "dc1",
+"log_level": "INFO",
+"ports": {
+"dns": -1,
+"http": 11500,
+"serf_lan": 11301,
+"serf_wan": 11302,
+"server": 11300
+},
+"start_join": ["127.0.0.1:9301"]
+ }

@@ -1,0 +1,14 @@
+{
+"ID": "zoo-health",
+"Name": "zoo-health",
+"Tags": ["health"],
+"Address": "127.0.0.1",
+"Port": 10098,
+"Check": {
+   "id": "zoo-custom-healthcheck",
+   // "DeregisterCriticalServiceAfter": "2m",
+   "name": "Zdrowie w ZOO",
+   "http": "http://127.0.0.1:10098/healthcheck",
+   "Interval": "10s"
+}
+}
